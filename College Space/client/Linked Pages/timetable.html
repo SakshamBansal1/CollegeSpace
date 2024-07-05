@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Space - Timetable</title>
+    <style>
+        /* Add some basic styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4F4F4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        th, td {
+            border: 1px solid #CCC;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+        th {
+            background-color: #EEE;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        td:first-child {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+            margin-right: 10px;
+            width: 100%;
+            max-width: 200px;
+        }
+        button[type="submit"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+            background-color: #1E90FF;
+            color: #FFF;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        button[type="submit"]:hover {
+            background-color: #0077B5;
+        }
+    </style>
+</head>
+<body>
+    <h1>College Space - Timetable</h1>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>8:00 - 9:00</td>
+            <td id="monday-1"></td>
+            <td id="tuesday-1"></td>
+            <td id="wednesday-1"></td>
+            <td id="thursday-1"></td>
+            <td id="friday-1"></td>
+        </tr>
+        <tr>
+            <td>9:00 - 10:00</td>
+            <td id="monday-2"></td>
+            <td id="tuesday-2"></td>
+            <td id="wednesday-2"></td>
+            <td id="thursday-2"></td>
+            <td id="friday-2"></td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td id="monday-3"></td>
+            <td id="tuesday-3"></td>
+            <td id="wednesday-3"></td>
+            <td id="thursday-3"></td>
+            <td id="friday-3"></td>
+        </tr>
+        <tr>
+            <td>1:00 - 2:00</td>
+            <td id="monday-4"></td>
+            <td id="tuesday-4"></td>
+            <td id="wednesday-4"></td>
+            <td id="thursday-4"></td>
+            <td id="friday-4"></td>
+        </tr>
+        <tr>
+            <td>2:00 - 3:00</td>
+            <td id="monday-5"></td>
+            <td id="tuesday-5"></td>
+            <td id="wednesday-5"></td>
+            <td id="thursday-5"></td>
+            <td id="friday-5"></td>
+        </tr>
+        <tr>
+            <td>2:00 - 3:00</td>
+            <td id="monday-6"></td>
+            <td id="tuesday-6"></td>
+            <td id="wednesday-6"></td>
+            <td id="thursday-6"></td>
+            <td id="friday-6"></td>
+        </tr>
+       </table>
+       <input type="text">
+       <button type="submit">Submit</button>
+       <script>
+        
+// Get the input element and button element
+const input = document.querySelector('input[type="text"]');
+const button = document.querySelector('button[type="submit"]');
+
+// Add a click event listener to the button
+button.addEventListener('click', function() {
+    // Get the value of the input element
+    const value = input.value;
+
+    // Get the day of the week from the user
+    const dayOfWeek = prompt("Enter the day of the week (e.g. monday-1)");
+
+    // Store the value in local storage
+    localStorage.setItem(dayOfWeek, value);
+
+    // Get all the table cells for the specified day
+    const cells = document.querySelector(`#${dayOfWeek}`);
+    cells.innerHTML = value;
+});
+
+// Retrieve the values from local storage on page load
+for (let i = 0; i < localStorage.length; i++) {
+    const dayOfWeek = localStorage.key(i);
+    const value = localStorage.getItem(dayOfWeek);
+    const cells = document.querySelector(`#${dayOfWeek}`);
+    cells.innerHTML = value;
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#event-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#event-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#event-form input[type="text"],
+#event-form input[type="date"],
+#event-form input[type="time"],
+#event-form textarea,
+#event-form input[type="file"],
+#event-form input[type="submit"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+#event-form input[type="submit"] {
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#event-form input[type="submit"]:hover {
+  background-color: #fff;
+  color: #1e90ff;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.event img {
+  max-width: 100%;
+}
+
+.event h3 {
+  margin-top: 0;
+}
+
+.event p {
+  margin-bottom: 0;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  /* Adjust header styles for smaller screens */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  nav ul {
+    margin-top: 10px;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  
+  /* Adjust container width */
+  .container {
+    max-width: 90%;
+  }
+  
+  /* Adjust event form styles */
+  #event-form input[type="text"],
+  #event-form input[type="date"],
+  #event-form input[type="time"],
+  #event-form textarea,
+  #event-form input[type="file"],
+  #event-form input[type="submit"] {
+    font-size: 14px;
+  }
+  
+  /* Adjust event styles */
+  .event {
+    padding: 5px;
+  }
+}

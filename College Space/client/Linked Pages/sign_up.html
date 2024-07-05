@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/433888fe69.js" crossorigin="anonymous"></script>
+    <link href="sign_up.css" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <h1>Sign Up</h1>
+            <form action="#">
+                <div class="control">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter Your email id" name="email" id="email">
+                </div>
+                <div class="control">
+                    <label for="psw">Password</label>
+                    <input type="password" name="psw" id="psw" placeholder="Enter Password">
+                </div>
+                <div class="control">
+                    <label for="psw2">Confirm Password</label>
+                    <input type="password" name="psw2" id="psw2" placeholder="Confirm Password">
+                </div>
+                <span><input type="checkbox">Remember me.</span>
+                <div class="control" class="div1">
+              
+                    <button id="btn1" onclick="signup()">CREATE ACCOUNT</button>
+                   </div>
+            </form>
+            <div class="link">
+                <a href="login_page.html">Already have an account?</a>
+
+            </div>
+        </div>
+    </section>    
+</body>
+<script>
+    function signup(){
+        var name=document.getElementById("name").value;
+        var email=document.getElementById("email").value;
+        var pass=document.getElementById("psw").value;
+
+        localStorage.setItem("name1",name);
+        localStorage.setItem("email1",email);
+        localStorage.setItem("pass1",pass);
+    }
+</script>
+</html>

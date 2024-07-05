@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Space - Upcoming Events</title>
+  <link rel="stylesheet" href="event.css">
+</head>
+<body>
+  <header>
+    <h1>College Space</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Notes</a></li>
+        <li><a href="#">Reminders</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <form id="event-form" enctype="multipart/form-data">
+        <label for="event-title">Event Title:</label>
+        <input type="text" id="event-title" name="event-title" required>
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event-date" required>
+        <label for="event-time">Event Time:</label>
+        <input type="time" id="event-time" name="event-time" required>
+        <label for="event-description">Event Description:</label>
+        <textarea id="event-description" name="event-description" rows="5" required></textarea>
+        <label for="event-image">Event Image:</label>
+        <input type="file" id="event-image" name="event-image" accept=".jpg,.jpeg,.png" required>
+        <input type="submit" value="Add Event">
+      </form>
+      <ul id="events"></ul>
+    </div>
+  </main>
+
+  <script src="event.js"></script>
+</body>
+</html>

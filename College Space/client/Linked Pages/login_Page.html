@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/433888fe69.js" crossorigin="anonymous"></script>
+    <link href="login_page.css" rel="stylesheet">
+    <title>Login page</title>
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <h1>Login</h1>
+            <!-- <form action="#"> -->
+                <div class="control">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email id">
+                </div>
+                <div class="control">
+                    <label for="psw" >Password</label>
+                    <input type="password" name="psw" id="psw" placeholder="Enter your Password">
+                </div>
+                <span><input type="checkbox">Remember me.</span>
+                <div class="control">
+              
+                 <button id="btn1" onclick="login()">Login</button>
+                </div>
+            <!-- </form> -->
+            <div class="link">
+                <a href="Forgot_password.html">Forgot Password </a> | <a href="sign_up.html">Sign Up</a>
+            </div>
+        </div>
+    </section>    
+
+</body>
+<script>
+    function login(){
+    var email=document.getElementById("email").value;
+    var pass=document.getElementById("psw").value;
+
+    var name1=localStorage.getItem("name1");
+    var email1=localStorage.getItem("email1");
+    var pass1=localStorage.getItem("pass1");
+
+    if(email1==email && pass1==pass){
+        window.location.href="/Main Page/index.html";
+    }
+    else{
+         alert("Invalid email or password");
+    }
+
+    }
+</script>
+</html>

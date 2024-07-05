@@ -1,0 +1,111 @@
+/* Reset styles for basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Add background color to body */
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for wrapper div */
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #555;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  /* Style for logo */
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Style for navbar links */
+  .navbar ul {
+    display: flex;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    margin-right: 20px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Style for center div */
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    color: #555;
+  }
+  
+  .center h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .center h2 {
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Style for button */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e67e22;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
+  
